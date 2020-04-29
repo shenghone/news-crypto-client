@@ -7,6 +7,7 @@ import axios from "axios";
 const BACK_END_URL = process.env.REACT_APP_CRYPTO_BACK_END;
 const getParam = (state) => state.CRYPTO.param;
 console.log(process.env.REACT_APP_CRYPTO_BACK_END);
+console.log(process.env.REACT_APP_WEATHER_API_KEY);
 function* handleCryptoLoad() {
   try {
     const query = yield select(getParam);
