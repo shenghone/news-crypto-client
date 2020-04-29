@@ -19,7 +19,7 @@ function* handleNewsLoad() {
     method: "get",
     url:
       BACK_END_URL +
-      `/top-headlines?category=${query}&keyword=${keyword}&page=${page}`,
+      `top-headlines?category=${query}&keyword=${keyword}&page=${page}`,
   };
   try {
     const {

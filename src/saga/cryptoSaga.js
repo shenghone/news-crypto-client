@@ -14,7 +14,7 @@ function* handleCryptoLoad() {
 
     const axiosConfig = {
       method: "get",
-      url: BACK_END_URL + `/crypto/${query}`,
+      url: BACK_END_URL + `crypto/${query}`,
       header: {
         Accept: "application/json; odata=nometadata",
       },
