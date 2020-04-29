@@ -4,9 +4,9 @@ import setCryptoAction from "../redux/actions/setCryptoAction";
 import selectCryptoAction from "../redux/actions/selectCryptoAction";
 import axios from "axios";
 
-const BACK_END_URL = process.env.CRYPTO_BACK_END;
+const BACK_END_URL = process.env.REACT_APP_CRYPTO_BACK_END;
 const getParam = (state) => state.CRYPTO.param;
-
+console.log(process.env.REACT_APP_CRYPTO_BACK_END);
 function* handleCryptoLoad() {
   try {
     const query = yield select(getParam);

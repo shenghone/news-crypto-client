@@ -3,7 +3,7 @@ import { NEWS } from "../redux/constants";
 import setNewsAction from "../redux/actions/setNewsAction";
 import axios from "axios";
 
-const BACK_END_URL = process.env.CRYPTO_BACK_END;
+const BACK_END_URL = process.env.REACT_APP_CRYPTO_BACK_END;
 const getPage = (state) => state.page;
 const getQuery = (state) => state.NEWS.query;
 const getNewsData = (state) => state.NEWS.news;

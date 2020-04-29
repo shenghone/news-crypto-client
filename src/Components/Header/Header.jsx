@@ -171,7 +171,7 @@ const Header = () => {
     const getWeather = async () => {
       try {
         const { data } = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=toronto,on,ca&units=metric&appid=${process.env.WEATHER_API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=toronto,on,ca&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
         );
         setWeather(data);
       } catch (err) {
