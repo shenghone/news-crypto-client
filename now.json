@@ -1,7 +1,12 @@
 {
   "env": {
-    "NEWS_API_KEY": "@news-secret",
     "WEATHER_API_KEY": "@weather-secret",
     "CRYPTO_BACK_END": "@crypto-back-end"
+  },
+  "build": {
+    "env": {
+      "WEATHER_API_KEY": "@weather-secret",
+      "CRYPTO_BACK_END": "@crypto-back-end"
+    }
   }
 }
