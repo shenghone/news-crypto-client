@@ -2,8 +2,6 @@ import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddelware from "redux-saga";
 import rootReducer from "./reducers";
 import rootSaga from "../saga";
-import { config } from "dotenv";
-config();
 
 const configureStore = () => {
   const sagaMiddleware = createSagaMiddelware();
