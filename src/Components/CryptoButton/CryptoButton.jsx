@@ -8,6 +8,8 @@ import eth from "../../Assets/eth-ethereum.svg";
 import bch from "../../Assets/bch-bitcoin-cash.svg";
 import usdt from "../../Assets/usdt-tether.svg";
 import xrp from "../../Assets/xrp-xrp.svg";
+import bnb from "../../Assets/bnb-binance-coin.svg";
+import usdc from "../../Assets/usdc-usd-coin.svg";
 
 const CryptoButtonWrapper = styled.div`
   font-family: "Roboto";
@@ -118,6 +120,10 @@ const CryptoButton = ({ id, xx, currentPrice, idx }) => {
         return xrp;
       case "bch-bitcoin-cash":
         return bch;
+      case "bnb-binance-coin":
+        return bnb;
+        case "usdc-usd-coin":
+          return usdc;
       default:
         return;
     }
@@ -132,10 +138,12 @@ const CryptoButton = ({ id, xx, currentPrice, idx }) => {
 
       case "usdt-tether":
         return "Tether";
-
+      case "usdc-usd-coin":
+        return "USDC";
       case "xrp-xrp":
         return "XRP";
-
+      case "bnb-binance-coin":
+        return "BNB";
       case "bch-bitcoin-cash":
         return "Bitcoin-cash";
       default:
