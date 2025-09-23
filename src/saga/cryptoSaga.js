@@ -13,7 +13,7 @@ function* handleCryptoLoad() {
 
     const axiosConfig = {
       method: "get",
-      url: BACK_END_URL + `crypto/${query}`,
+      url: process.env.REACT_APP_CRYPTO_BACK_END + `crypto/${query}`,
       header: {
         Accept: "application/json; odata=nometadata",
       },
@@ -22,6 +22,7 @@ function* handleCryptoLoad() {
     const {
       data: { periodicalData, topFiveCrypto, tickers, error },
     } = yield call(axios, axiosConfig);
+
     yield put(selectCryptoAction(topFiveCrypto));
     yield put(setCryptoAction(periodicalData, topFiveCrypto, tickers, error));
   } catch (err) {

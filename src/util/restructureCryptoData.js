@@ -13,6 +13,7 @@ const restructureCryptoData = (data) => {
   if (data && data.length > 0) {
     return data.reduce((result, crypto, idx) => {
       const d = crypto.data.reduce((axisArray, singleDayData) => {
+        console.log(singleDayData)
         return axisArray.concat({
           x: dayjs(singleDayData.timestamp)
             .subtract(

@@ -318,6 +318,9 @@ const Crypto = ({ match: { params }, ...props }) => {
   const SET_MENU = (bool) => dispatch(setMenuAction(bool));
   const SET_PARAM = useCallback((p) => dispatch(setParamAction(p)), [dispatch]);
 
+
+  console.log(tickers);
+  console.log(cryptoData)
   useEffect(() => {
     if (tickers && tickers.length > 0) {
       const tm = tickers.reduce((newMap, ticker) => {

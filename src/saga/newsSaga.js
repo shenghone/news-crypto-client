@@ -18,7 +18,7 @@ function* handleNewsLoad() {
   const axiosConfig = {
     method: "get",
     url:
-      BACK_END_URL +
+      process.env.REACT_APP_CRYPTO_BACK_END +
       `top-headlines?category=${query}&keyword=${keyword}&page=${page}`,
   };
   try {
@@ -33,7 +33,8 @@ function* handleNewsLoad() {
     } else {
       const newsData = yield select(getNewsData);
       const filteredNews = yield select(getFilteredNews);
-
+      console.log(`Line 36`)
+      console.log(`The data is ${newsData}`)
       if (newsData.length + filteredNews < availableNews) {
         yield put(setNewsAction(articles, totalResults, status));
       }

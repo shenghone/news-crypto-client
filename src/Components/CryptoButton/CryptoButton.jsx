@@ -10,6 +10,7 @@ import usdt from "../../Assets/usdt-tether.svg";
 import xrp from "../../Assets/xrp-xrp.svg";
 import bnb from "../../Assets/bnb-binance-coin.svg";
 import usdc from "../../Assets/usdc-usd-coin.svg";
+import sol from "../../Assets/solana-icon.svg"
 
 const CryptoButtonWrapper = styled.div`
   font-family: "Roboto";
@@ -124,6 +125,8 @@ const CryptoButton = ({ id, xx, currentPrice, idx }) => {
         return bnb;
         case "usdc-usd-coin":
           return usdc;
+      case "sol-solana":
+        return sol;
       default:
         return;
     }
@@ -132,10 +135,8 @@ const CryptoButton = ({ id, xx, currentPrice, idx }) => {
     switch (id) {
       case "btc-bitcoin":
         return "Bitcoin";
-
       case "eth-ethereum":
         return "Ethereum";
-
       case "usdt-tether":
         return "Tether";
       case "usdc-usd-coin":
@@ -146,6 +147,8 @@ const CryptoButton = ({ id, xx, currentPrice, idx }) => {
         return "BNB";
       case "bch-bitcoin-cash":
         return "Bitcoin-cash";
+      case "sol-solana":
+          return "Solana";
       default:
         return;
     }
