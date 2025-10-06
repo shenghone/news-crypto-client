@@ -420,42 +420,6 @@ const Crypto = ({ match: { params }, ...props }) => {
             >
               1d
             </button>
-            <button
-              style={{
-                border: getBorder(QUERY, "7d"),
-                color: getColor(QUERY, "7d"),
-              }}
-              onClick={() => handleTo("7d")}
-            >
-              7d
-            </button>
-            <button
-              style={{
-                border: getBorder(QUERY, "1m"),
-                color: getColor(QUERY, "1m"),
-              }}
-              onClick={() => handleTo("1m")}
-            >
-              1m
-            </button>
-            <button
-              style={{
-                border: getBorder(QUERY, "1y"),
-                color: getColor(QUERY, "1y"),
-              }}
-              onClick={() => handleTo("1y")}
-            >
-              1y
-            </button>
-            <button
-              style={{
-                border: getBorder(QUERY, "5y"),
-                color: getColor(QUERY, "5y"),
-              }}
-              onClick={() => handleTo("5y")}
-            >
-              5y
-            </button>
           </div>
           {!menuStatus && (
             <div ref={burgerRef} onClick={() => handleBurgerClick(true)}>
